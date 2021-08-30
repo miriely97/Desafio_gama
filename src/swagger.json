@@ -1,0 +1,122 @@
+{
+    "openapi": "3.0.0",
+  
+    "info": {
+      "title": "API do desafio tech",
+      "description": "essa é a api do desafio",
+      "version": "0.0.1"
+    },
+  
+    "servers": [
+      {
+        "url": "http://localhost:5000",
+        "description": "ambiente de desenvolvimento"
+      }
+    ],
+  
+    "paths": {
+      "/register": {
+        "post": {
+          "summary": "Cadastro de candidato",
+          "description": "Rota de cadastro de usuário, recebe: nome, cargo, dataNascimento, estadoCivil, sexo, cep, logradouro, numero, bairro, cidade, uf, telefone1, telefone2, celular, contato, email, identidade, cpf, veiculo, habilitacao",
+          "tags": ["candidato"],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "nome": {
+                      "type": "string"
+                    },
+                    "cargo": {
+                        "type": "string"
+                    },
+                    "dataNascimento": {
+                        "type": "string"
+                    },
+                    "estadoCivil": {
+                        "type": "string"
+                    },
+                    "sexo": {
+                        "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                  },
+                    "logradouro": {
+                        "type": "string"
+                    },
+                    "numero": {
+                        "type": "string"
+                    },
+                    "bairro": {
+                        "type": "string"
+                    },
+                    "cidade": {
+                      "type": "string"
+                    },
+                    "uf": {
+                        "type": "string"
+                    },
+                    "telefone1": {
+                      "type": "string"
+                    },
+                    "telefone2": {
+                      "type": "string"
+                    },
+                    "celular": {
+                        "type": "string"
+                    },
+                    "contato": {
+                      "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "identidade": {
+                        "type": "string"
+                      },
+                      "cpf": {
+                        "type": "string"
+                      },
+                      "veiculo": {
+                        "type": "string"
+                      },
+                      "habilitacao": {
+                        "type": "string"
+                      }
+                  }
+                },
+                "examples": {
+                  "sou eu": {
+                    "value": {
+                      "nome": "Carla",
+                      "cargo": "estudante",
+                      "dataNascimento": "1997-01-14",
+                      "estadoCivil": "solteira",
+                      "sexo": "feminino cis",
+                      "cep": "00000-000",
+                      "logradouro": "Av. Jose",
+                      "numero": "12",
+                      "bairro": "brasilinha",
+                      "cidade": "Bonfinópolis",
+                      "uf": "mg",
+                      "telefone1": "123654",
+                      "telefone2": "123654",
+                      "celular": "38 998575226",
+                      "contato": "1459987",
+                      "email": "carla.miriely@gmail.com",
+                      "identidade": "m14587",
+                      "cpf": "1544514846231",
+                      "veiculo": "Não possui",
+                      "habilitacao": "não possui"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
